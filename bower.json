@@ -1,0 +1,23 @@
+{
+  "name": "rockit-express",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mvoneverton/IBUILD",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.4.0",
+    "normalize-css": "normalize.css#~3.0.3",
+    "handlebars": "~4.0.5"
+  }
+}

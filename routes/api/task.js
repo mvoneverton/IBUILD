@@ -12,55 +12,32 @@ var router = express.Router()
 // Utility for changing case
 var changeCase = require('../../lib/change-case')
 
-// List all users
+// List all tasks
 router.get('/', function(req, res) {
   //debug('GET' + req.path)
 
-  db.selectFile('user-with-properties', function(error, rows, fields) {
+  db.selectFile('default_task.sql', function(error, rows, fields) {
     if (error) {
       debug('DB Error', error)
       return res.status(500).send({ error })
     }
 
-    res.json(rows.map(changeCase))
-  })
-})
+    rows.forEach(function (row) {
+      db.insert('task', row, function () {
 
-// Homeowners
-router.get('/homeowners', function(req, res) {
-  //debug('GET' + req.path)
-
-  db.selectFile('get-homeowners', function(error, rows, fields) {
-    if (error) {
-      debug('DB Error', error)
-      return res.status(500).send({ error })
-    }
+      })
+    })
 
     res.json(rows.map(changeCase))
   })
 })
 
-// Get user by ID
-router.get('/:id', function(req, res) {
-  //debug('GET' + req.path)
-  var id = req.params.id
-
-  db.selectFile('get-user', {id: id}, function(error, rows) {
-    if (error) {
-      debug('DB Error', error)
-      return res.status(500).send({ error })
-    }
-
-    res.json(rows.map(changeCase))
-  })
-})
-
-// Create a user
+// Create a task
 router.post('/', function(req, res) {
   //debug('POST' +  req.path + ',' + req.body)
   var values = snakeProps(req.body)
 
-  db.insert('user', values, function(error, id) {
+  db.insert('task', values, function(error, id) {
     if (error) {
       debug('DB Error', error)
       return res.status(500).send({ error })

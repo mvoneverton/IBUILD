@@ -1,0 +1,7 @@
+// Responsive
+
+@mixin wider-than($min-width) {
+	@media screen and (min-width: $min-width) {
+		@content;
+	}
+}

@@ -1,0 +1,29 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {{#each this}}
+  <tr class="my-task" data-id="{{task_id}}">
+    <td>{{task_id}}</td>
+    <td>{{name}}</td>
+    <td>
+      <select class="status">
+        <option value="1">Not Started</option>
+        <option value="2">In Progress</option>
+        <option value="3">Completed</option>
+      </select>
+    </td>
+    <td> <i class="fa fa-plus"></i></td>
+  </tr>
+  {{/each}}
+
+  </tbody>
+
+</table>
