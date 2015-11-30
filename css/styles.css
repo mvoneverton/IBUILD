@@ -1,0 +1,206 @@
+@import url(/vendor/normalize-css/normalize.css);
+@import url(/vendor/font-awesome/css/font-awesome.css);
+html {
+  box-sizing: border-box;
+  color: #444;
+  font: 12pt 'Open Sans', Arial;
+  font-weight: 300; }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit; }
+
+.panel > div {
+  width: 960px;
+  margin: 0 auto;
+  min-height: 600px; }
+
+.primary-header {
+  min-height: 40px;
+  background-color: #33373A;
+  padding: 10px;
+  position: relative; }
+
+.primary-header .logo {
+  font: 10pt 'open-sans' Arial;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .primary-header .logo a {
+    text-decoration: none; }
+
+.primary-nav {
+  text-align: center;
+  background-color: #34383B;
+  border-bottom: 5px solid #33617F; }
+
+.primary-nav a {
+  display: inline-block;
+  font: 12pt 'open-sans' Arial;
+  color: #fff;
+  margin-bottom: 10px;
+  text-decoration: none; }
+
+.tag-line {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0; }
+
+.tag-line .slogan {
+  display: inline-block;
+  font: 24pt 'lobster' Cursive;
+  color: #fff; }
+
+.hero {
+  background-color: yellow;
+  position: relative;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 1%, transparent, transparent, transparent), url("/images/luxuryhome.png");
+  background-size: cover;
+  border-bottom: 1px solid black; }
+
+.content {
+  background-color: #1C1C1C; }
+
+.page {
+  background-color: #eee; }
+
+.app-page {
+  display: flex; }
+
+.breakouts {
+  text-align: center; }
+  .breakouts .breakout {
+    display: inline-block;
+    margin: 20px 5px;
+    width: 300px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.27);
+    min-height: 200px;
+    position: relative;
+    background-size: cover; }
+    .breakouts .breakout a {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      text-decoration: none; }
+
+.history {
+  color: #fff;
+  text-align: center; }
+
+.primary-footer {
+  background-color: #252525;
+  min-height: 100px;
+  position: relative;
+  border-top: 5px solid #33617F; }
+  .primary-footer .address {
+    text-align: center; }
+
+.primary-footer .copywrite {
+  background-color: #000000;
+  color: #fff; }
+
+.address * {
+  margin: 0 auto;
+  font: 12pt 'open-sans' Arial; }
+
+.process {
+  background-image: url("/images/construction.png"); }
+
+.testimony {
+  background-image: url("/images/library.png"); }
+
+.login {
+  background-image: url("/images/key.png");
+  background-color: rgba(14, 56, 224, 0.52); }
+
+.app-page aside {
+  background-color: #1C1C1C;
+  width: 200px;
+  position: relative; }
+
+.app-page main {
+  background-color: #ccc;
+  flex: 1; }
+
+.aside-header {
+  color: #fff;
+  min-height: 50px; }
+  .aside-header .logo {
+    font-size: 10px; }
+
+.projects {
+  min-height: 50px; }
+  .projects h1 {
+    color: #fff;
+    text-align: center; }
+  .projects a {
+    text-decoration: none; }
+
+.project-list .name {
+  color: #fff;
+  text-align: center;
+  min-height: 50px; }
+
+.main-header {
+  background-color: #33617F;
+  min-height: 50px;
+  border-bottom: 1px solid black; }
+  .main-header a {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.app-info {
+  background-color: #fff;
+  min-height: 50px; }
+
+.app-breakouts {
+  min-height: 100px;
+  text-align: center;
+  transform: translateY(-20%); }
+
+.app-breakout {
+  background-color: red;
+  display: inline-block;
+  width: 200px;
+  min-height: 100px; }
+
+section {
+  background-color: #ccc; }
+
+section > h1 {
+  background-color: #33617F;
+  color: #fff; }
+
+.task-list {
+  min-height: 200px; }
+  .task-list div {
+    background-color: black;
+    position: relative; }
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  right: 20px; }
+
+thead tr {
+  width: 100%;
+  background-color: #fff; }
+  thead tr th {
+    width: 25%; }
+
+tbody tr {
+  width: 100%; }
+
+tbody tr:nth-child(odd) {
+  background-color: #ccc; }
+
+tbody tr:nth-child(even) {
+  background-color: #fff; }
