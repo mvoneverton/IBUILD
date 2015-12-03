@@ -18,6 +18,7 @@ router.get('/:entity', (req, res) => {
 
   db.select(sql, (error, rows, fields) => {
     if (error) {
+      debug('DB Error ', error)
       return res.status(500).send({ error, sql })
     }
 
@@ -33,6 +34,7 @@ router.get('/:entity/:id', (req, res) => {
 
   db.select(sql, { id }, (error, rows, fields) => {
     if (error) {
+      debug('DB Error ', error)
       return res.status(500).send({ error, sql })
     }
 
@@ -49,6 +51,7 @@ router.get('/:entity/:id/:subEntity', (req, res) => {
 
   db.select(sql, { id }, (error, rows, fields) => {
     if (error) {
+      debug('DB Error ', error)
       return res.status(500).send({ error, sql })
     }
 
@@ -63,6 +66,7 @@ router.post('/:entity', (req, res) => {
 
   db.insert(entity, changeCase(payload), (error, id) => {
     if (error) {
+      debug('DB Error ', error)
       return res.status(500).send({ error })
     }
 
@@ -80,6 +84,7 @@ router.put('/:entity/:id', (req, res) => {
 
   db.update(entity, changeCase(payload), { [`${entity}_id`]: id }, error => {
     if (error) {
+      debug('DB Error ', error)
       return res.status(500).send({ error })
     }
 

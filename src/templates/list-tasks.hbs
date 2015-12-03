@@ -1,26 +1,29 @@
+<h6>Tasks:</h6>
+<p><a href="#/new-task"><i class="fa fa-plus-square"></i> add new task</a></p>
+
 <table border="1">
   <thead>
     <tr>
-      <th>Order</th>
       <th>Name</th>
       <th>Status</th>
       <th>Notes</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
 
   {{#each this}}
   <tr class="my-task" data-id="{{task_id}}">
-    <td>{{task_id}}</td>
     <td>{{name}}</td>
     <td>
       <select class="status">
-        <option value="1">Not Started</option>
-        <option value="2">In Progress</option>
-        <option value="3">Completed</option>
+        <option value="1" {{#checkStatus 1}}selected{{/checkStatus}}>Not Started</option>
+        <option value="2" {{#checkStatus 2}}selected{{/checkStatus}}>In Progress</option>
+        <option value="3" {{#checkStatus 3}}selected{{/checkStatus}}>Completed</option>
       </select>
     </td>
-    <td> <i class="fa fa-plus"></i></td>
+    <td class="notes"><textarea>{{notes}}</textarea><button class="note-save"> Save</button></td>
+    <td class="remove-task"><a href="">Remove task</a></td>
   </tr>
   {{/each}}
 

@@ -1,6 +1,30 @@
-{{#each this}}
-<div class="name" data-id="{{user_id}}">
-	<a href="#/name/:id">{{last_name}}</a>
-	<p>{{email}}</p>
-</div>
-{{/each}}
+<h6>My Properties:</h6>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>City</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {{#each this}}
+  <tr class="home-owner" data-id="{{user_id}}">
+    <td>{{last_name}}</td>
+    <td>{{first_name}}</td>
+    <td>{{email}}</td>
+    <td>{{phone}}</td>
+    <td>{{address}}</td>
+    <td>{{city}}</td>
+    <td class="view"><button><a href="#/property/{{property_id}}/tasks">View</a></button></td>
+  </tr>
+  {{/each}}
+
+  </tbody>
+
+</table>

@@ -15,14 +15,14 @@
 
 .primary-header {
 	.logo {
-		// background-color: red;
-		font: 10pt 'open-sans' Arial;
+
+		font: 24pt 'lobster' Cursive;
 		color: #fff;
 		position: absolute;
-		top: 0;
-		left: 0;
-		a {
-			text-decoration: none;
+		top: 20;
+		left: 50px;
+		img {
+			width: 60px;
 		}	
 	}
 }

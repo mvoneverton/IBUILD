@@ -1,2 +1,3 @@
 SELECT *
-FROM user
+FROM property
+WEHERE user_id = :userId

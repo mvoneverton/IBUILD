@@ -10,9 +10,9 @@ var App = require('../app');
 var AddTask = Backbone.View.extend({
   el: 'section',
 
+
   events: {
   	'submit .new-task': 'createTask',
-    'change select': 'statusChange'
   },
 
   render: function () {
@@ -20,12 +20,17 @@ var AddTask = Backbone.View.extend({
   },
 
   createTask: function() {
-  	console.log('submit')
-  	return false
-  },
 
-  statusChange: function () {
-    $(this).parent('.my-task').attr('id');
+    var taskData = {
+      property_id: '1',
+      name: $('form.new-task input[name="name"]').val(),
+      task_status_id: 1,
+    }
+
+    $.post('/api/task', taskData).done(function (data) {
+      window.location = '/app/#/property/1/tasks';
+    })
+    return false
   },
 
 })

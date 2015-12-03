@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   color: #444;
-  font: 12pt 'Open Sans', Arial;
+  font: 14pt 'Open Sans', Arial;
   font-weight: 300; }
 
 *, *::before, *::after {
@@ -23,13 +23,13 @@ html {
   position: relative; }
 
 .primary-header .logo {
-  font: 10pt 'open-sans' Arial;
+  font: 24pt 'lobster' Cursive;
   color: #fff;
   position: absolute;
-  top: 0;
-  left: 0; }
-  .primary-header .logo a {
-    text-decoration: none; }
+  top: 20;
+  left: 50px; }
+  .primary-header .logo img {
+    width: 60px; }
 
 .primary-nav {
   text-align: center;
@@ -65,11 +65,17 @@ html {
 .content {
   background-color: #1C1C1C; }
 
+button, .button {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #00A7C4;
+  text-decoration: none;
+  width: 60px;
+  padding: 5px;
+  font-size: 12pt; }
+
 .page {
   background-color: #eee; }
-
-.app-page {
-  display: flex; }
 
 .breakouts {
   text-align: center; }
@@ -110,7 +116,7 @@ html {
   font: 12pt 'open-sans' Arial; }
 
 .process {
-  background-image: url("/images/construction.png"); }
+  background-image: url("/images/wood-working.png"); }
 
 .testimony {
   background-image: url("/images/library.png"); }
@@ -119,47 +125,55 @@ html {
   background-image: url("/images/key.png");
   background-color: rgba(14, 56, 224, 0.52); }
 
+.fa-wrench {
+  color: #fff; }
+
+.app-page {
+  display: flex; }
+
 .app-page aside {
-  background-color: #1C1C1C;
-  width: 200px;
-  position: relative; }
+  background-color: #3E424E;
+  width: 150px;
+  position: relative;
+  padding: 40px; }
 
 .app-page main {
-  background-color: #ccc;
+  background-color: #F7F7F7;
   flex: 1; }
 
 .aside-header {
   color: #fff;
   min-height: 50px; }
   .aside-header .logo {
-    font-size: 10px; }
+    font-size: 12px; }
+    .aside-header .logo img {
+      width: 75px; }
 
-.projects {
-  min-height: 50px; }
-  .projects h1 {
-    color: #fff;
-    text-align: center; }
-  .projects a {
-    text-decoration: none; }
-
-.project-list .name {
+.property-list .property {
   color: #fff;
   text-align: center;
   min-height: 50px; }
 
 .main-header {
-  background-color: #33617F;
+  background-color: #00A7C4;
   min-height: 50px;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #9EDAE4;
+  position: relative; }
   .main-header a {
     color: #fff;
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 10px; }
 
 .app-info {
   background-color: #fff;
-  min-height: 50px; }
+  min-height: 100px;
+  position: relative; }
+  .app-info a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 13px; }
 
 .app-breakouts {
   min-height: 100px;
@@ -167,17 +181,29 @@ html {
   transform: translateY(-20%); }
 
 .app-breakout {
-  background-color: red;
+  background-color: #FFF;
+  width: 300px;
   display: inline-block;
-  width: 200px;
-  min-height: 100px; }
+  border: 3px solid #F4F4F4;
+  border-radius: 3px;
+  text-align: center;
+  min-height: 150px; }
+  .app-breakout div:first-child {
+    background-color: #F7F7F7;
+    padding: 10px;
+    font-size: 2em;
+    color: #00A7C4; }
+  .app-breakout div:last-child {
+    padding: 10px; }
 
 section {
-  background-color: #ccc; }
+  background-color: #F7F7F7;
+  padding: 10px; }
 
-section > h1 {
-  background-color: #33617F;
-  color: #fff; }
+.property-list > h6 {
+  background-color: #00A7C4;
+  color: #fff;
+  padding: 10px; }
 
 .task-list {
   min-height: 200px; }
@@ -185,16 +211,21 @@ section > h1 {
     background-color: black;
     position: relative; }
 
-.logout {
+.logout a {
   position: absolute;
-  bottom: 0;
-  right: 20px; }
+  bottom: 0; }
+
+table {
+  border: none; }
 
 thead tr {
   width: 100%;
-  background-color: #fff; }
+  background-color: #F7F7F7; }
   thead tr th {
-    width: 25%; }
+    width: 20%;
+    border-top: none;
+    border-bottom: 1px solid #EDEDED;
+    min-height: 10px; }
 
 tbody tr {
   width: 100%; }
@@ -204,3 +235,64 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
   background-color: #fff; }
+
+tbody .my-task {
+  text-align: center; }
+
+.my-task td:last-child {
+  text-align: initial;
+  padding: 5px; }
+
+.home-owner td {
+  padding: 10px;
+  border: none; }
+
+.view button {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #00A7C4; }
+  .view button a {
+    text-decoration: none; }
+
+.my-task td {
+  border: none; }
+
+.notes textarea {
+  height: 1.5em;
+  border-radius: 3px;
+  resize: none; }
+
+.notes textarea:focus {
+  outline: none; }
+
+.my-task.expand textarea {
+  height: 5em;
+  display: block;
+  margin: 0 auto; }
+
+.notes > .note-save {
+  display: none; }
+
+.my-task.expand .note-save {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #00A7C4;
+  background-color: #fff; }
+
+.new-property > * {
+  display: block;
+  margin-bottom: 10px; }
+
+.new-property button {
+  background-color: #fff;
+  border: 1px solid #00A7C4;
+  border-radius: 5px; }
+
+.new-task button {
+  background-color: #fff;
+  border: 1px solid #00A7C4;
+  border-radius: 5px; }
+
+.property-list {
+  margin: 0 auto; }

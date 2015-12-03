@@ -1,3 +1,5 @@
 SELECT *
 FROM user
-WHERE is_contractor = 0
+JOIN property
+WHERE user.user_id = property.user_id
+AND is_contractor = 0

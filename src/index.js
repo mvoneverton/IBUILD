@@ -4,20 +4,16 @@ var tmpl = require('./templates')
 
 var App = require('./app');
 var taskCollection = require('./collections/tasks');
-// var userCollection = require('./collections/users');
 var homeownersCollection = require('./collections/homeowners');
 
 var ListTasksView = require('./views/list-tasks');
 App.Views.ListTasks = new ListTasksView;
 
-// var ListUsersView = require('./views/list-users');
-// App.Views.ListUsers = new ListUsersView;
-
 var ListHomeownersView = require('./views/list-homeowners');
 App.Views.ListHomeowners = new ListHomeownersView;
 
-var AddProjectView = require('./views/add-new-project');
-App.Views.AddProject = new AddProjectView;
+var AddPropertyView = require('./views/add-new-property');
+App.Views.AddProperty = new AddPropertyView;
 
 var AddTaskView = require('./views/add-new-task');
 App.Views.AddTask = new AddTaskView;
@@ -25,12 +21,12 @@ App.Views.AddTask = new AddTaskView;
 var AppRouter = Backbone.Router.extend({
 
 	routes: {
-		'(/)': 'home',
+		'(/)': 'properties',
 		'login(/)': 'login',
-		'projects(/)': 'projects',
-		'name/:id(/)': 'name',
-		'new-project(/)': 'newProject',
-		'new-task(/)': 'newTask'
+		'properties(/)': 'properties',
+		'property/:id/tasks': 'propertyTasks',
+		'new-property(/)': 'newProperty',
+		'new-task(/)': 'newTask',
 	},
 
 	home: function () {
@@ -38,25 +34,24 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	login: function () {
-		window.location.href = '/application.html';
+		window.location.href = '/app/';
 	},
 
-	projects: function () {
-		// App.Views.ListTasks.render();
+	properties: function () {
 		App.Views.ListHomeowners.render();
 	},
 
-	name: function (id) {
-		App.Views.ListTasks.render();
+	propertyTasks: function (id) {
+		App.Views.ListTasks.render(id);
 	},
 
-	newProject: function () {
-		App.Views.AddProject.render();
+	newProperty: function () {
+		App.Views.AddProperty.render();
 	},
 
 	newTask: function () {
 		App.Views.AddTask.render();
-	},
+	}
 
 });
 

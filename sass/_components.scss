@@ -1,21 +1,24 @@
-// Components
+// Default
+button, .button {
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid #00A7C4;
+	text-decoration: none;
+	width: 60px;
+	padding: 5px;
+	font-size: 12pt;
+}
 
+// Homepage Components
 .page {
 	background-color: #eee;
 }
 
-.app-page {
-	display: flex;
-}
-
 .breakouts {
-	// padding: 10px;
 	text-align: center;
 	.breakout {
-		// background-color: #fff;
 		display: inline-block;
 		margin: 20px 5px;
-		// transform: translateY(-10%);
 		width: 300px;
 		box-shadow: 2px 2px 2px rgba(0,0,0,0.27);
 		min-height: 200px;
@@ -62,7 +65,7 @@
 }
 
 .process {
-	background-image: url("/images/construction.png");
+	background-image: url("/images/wood-working.png");
 
 }
 
@@ -76,85 +79,108 @@
 	background-color: rgba(14,56,224,.52);
 }
 
+.fa-wrench {
+	color: #fff;
+}
+
+
+// Application Page
+.app-page {
+	display: flex;
+}
+
 .app-page aside {
-	background-color: #1C1C1C;
-	width: 200px;
+	background-color: #3E424E;
+	width: 150px;
 	position: relative;
+	padding: 40px;
 }
 
 .app-page main {
-	background-color: #ccc;
+	background-color: #F7F7F7;
 	flex: 1;
-	// padding: 10px;
 }
 
 .aside-header {
 	color: #fff;
 	min-height: 50px;
 	.logo {
-		font-size: 10px;
+		font-size: 12px;
+		img {
+			width: 75px;
+		}
 	}
 }
 
-.projects {
-	min-height: 50px;
-	h1 {
-		color: #fff;
-		text-align: center;
-	}
-	a {
-		text-decoration: none;
-	}
-}
-
-.project-list .name {
+.property-list .property {
 	color: #fff;
 	text-align: center;
 	min-height: 50px;
 }
 
 .main-header {
-	background-color: #33617F;
+	background-color: #00A7C4;
 	min-height: 50px;
-	border-bottom: 1px solid black;
-
+	border-bottom: 1px solid #9EDAE4;
+	position: relative;
 	a {
 		color: #fff;
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 10px;
 	}
 }
 
 .app-info {
 	background-color: #fff;
-	min-height: 50px;
+	min-height: 100px;
+	position: relative;
+	a {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 13px;
+	}
 }
 
 .app-breakouts {
 	min-height: 100px;
+	// display: flex;
 	text-align: center;
 	transform: translateY(-20%);
 }
 
 .app-breakout {
-	background-color: red;
+	background-color: #FFF;
+	width: 300px;
 	display: inline-block;
-	width: 200px;
-	min-height: 100px;
+	border: 3px solid #F4F4F4;
+	border-radius: 3px;
+	text-align: center;
+	min-height: 150px;
+	div:first-child {
+		background-color: #F7F7F7;
+		padding: 10px;
+		font-size: 2em;
+		color: #00A7C4;
+	}
+	div:last-child {
+		padding: 10px;
+	}
 }
 
 section {
-	background-color: #ccc;
+	background-color: #F7F7F7;
+	padding: 10px;
 }
 
-section > h1 {
-	background-color: #33617F;
+.property-list > h6 {
+	background-color: #00A7C4;
 	color: #fff;
+	padding: 10px;
 }
 
 .task-list {
-	// background-color: magenta;
 	min-height: 200px;
 	div {
 		background-color: black;
@@ -164,16 +190,25 @@ section > h1 {
 }
 
 .logout {
-	position: absolute;
-	bottom: 0;
-	right: 20px;
+	a {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+table {
+	border: none;
 }
 
 thead tr {
 	width: 100%;
-	background-color: #fff;
+	background-color: #F7F7F7;
+
 	th {
-		width: 25%;
+		width: 20%;
+		border-top: none;
+		border-bottom: 1px solid #EDEDED;
+		min-height: 10px;
 	}
 }
 
@@ -189,7 +224,79 @@ tbody tr:nth-child(even) {
 	background-color: #fff;
 }
 
+tbody .my-task {
+	text-align: center;
+}
 
+.my-task td:last-child {
+	text-align: initial;
+	padding: 5px;
+}
 
+.home-owner td {
+	padding: 10px;
+	border: none;
+}
 
+.view button {
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid #00A7C4;
+	a {
+		text-decoration: none;
+	}
+}
+
+.my-task td {
+	border: none;
+}
+
+.notes textarea {
+	height: 1.5em;
+	border-radius: 3px;
+	resize: none;
+}
+
+.notes textarea:focus {
+	outline: none;
+}
+
+.my-task.expand textarea {
+	height: 5em;
+	display: block;
+	margin: 0 auto;
+}
+
+.notes > .note-save {
+	display: none;
+}
+
+.my-task.expand .note-save {
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #00A7C4;
+	background-color: #fff;
+}
+
+.new-property > * {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.new-property button {
+	background-color: #fff;
+	border: 1px solid #00A7C4;
+	border-radius: 5px;
+}
+
+.new-task button {
+	background-color: #fff;
+	border: 1px solid #00A7C4;
+	border-radius: 5px;
+}
+
+.property-list {
+	margin: 0 auto;
+}
 
