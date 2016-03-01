@@ -7,7 +7,6 @@ var source = require('vinyl-source-stream');
 var hbsfy = require('hbsfy');
 var rimraf = require('rimraf');
 var browserify = require('browserify');
-
  
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
