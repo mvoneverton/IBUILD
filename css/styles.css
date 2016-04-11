@@ -58,7 +58,7 @@ html {
 .hero {
   background-color: yellow;
   position: relative;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 1%, transparent, transparent, transparent), url("/images/luxuryhome.png");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 1%, transparent, transparent, transparent), url("../images/luxuryhome.png");
   background-size: cover;
   border-bottom: 1px solid black; }
 
@@ -116,13 +116,13 @@ button, .button {
   font: 12pt 'open-sans' Arial; }
 
 .process {
-  background-image: url("/images/wood-working.png"); }
+  background-image: url("../images/wood-working.png"); }
 
 .testimony {
-  background-image: url("/images/library.png"); }
+  background-image: url("../images/library.png"); }
 
 .login {
-  background-image: url("/images/key.png");
+  background-image: url("../images/key.png");
   background-color: rgba(14, 56, 224, 0.52); }
 
 .fa-wrench {
